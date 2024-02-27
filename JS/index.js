@@ -43,17 +43,21 @@ let myCategories=[
     "lighting"
   ];
 
-// categorySorter(myCategories)
+ //categorySorter(myCategories)
 
 // controller 
 function categorySorter(categoriesToSort) {
-    console.log("sort");
+    //console.log("sort");
 
     // hoved kategori arrays
     let myElectronics = []
     let myCosmetics = []
+    let myHome = []
+    let myWomen = []
+    let myMen = []
+    let myAccesories = []
     let myVehicles = []
-    let myMisc = []
+    let myGroceries = []
 
     categoriesToSort.forEach(category => {
 
@@ -62,14 +66,43 @@ function categorySorter(categoriesToSort) {
             case 'laptops':
             case 'lighting':
             case 'smartphones':
-
+             console.log('Electronics'); 
                 myElectronics.push(category)
                 break;
 
             case 'fragrances':
             case 'skincare':
+                console.log('Care');
                 myCosmetics.push(category)
+                break;
+            
+            case 'furniture':
+            case 'home-decoration':
+                console.log('Home');
+                myHome.push(category)
+                break;
 
+            case 'tops':
+            case 'women-dresses':
+            case 'women-shoes':
+                console.log('women');
+                myWomen.push(category)
+                break;
+
+            case 'mens-shirts':
+            case 'mens-shoes':
+                console.log('men');
+                myMen.push(category)
+                break;
+            
+            case 'mens-watches':
+            case 'women-watches':
+            case 'womens-watches':
+            case 'womens-bags':
+            case 'womens-jewellery':
+            case 'sunglasses':
+                console.log('accesories');
+                myAccesories.push(category)
                 break;
 
             case 'automotive':
@@ -77,6 +110,7 @@ function categorySorter(categoriesToSort) {
                 myVehicles.push(category)
 
                 break;
+            
 
             default:
 
@@ -86,8 +120,9 @@ function categorySorter(categoriesToSort) {
 
     });
 
-     console.log(myElectronics);
+    //console.log(myElectronics);
     console.log(myCosmetics);
+    console.log(myHome);
     console.log(myVehicles);
     console.log(myMisc); 
 
@@ -181,17 +216,5 @@ function navCallback(myItem) {
 
 }
 
-// function BuildNavigation(myNavigationData){
 
-// let myNavElement= document.getElementById('navigation')
-
-// let myNavigationHTML=''
-
-// myNavigationData.forEach(superCat => {
-//         console.log(superCat.superCategoryname);
-
-//       let myCatHTML=`<div class="navCategories"><h3 class= "navRollover" onClick="navCallBack('category 1)">category 1
-//       </h3></div>`    
-//     });
-// }
 
