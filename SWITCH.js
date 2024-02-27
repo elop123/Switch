@@ -1,4 +1,4 @@
-//swtich structure
+//switch structure
 
 // let myValue=100
 
